@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Forecast</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-100 min-h-screen flex flex-col items-center justify-center p-4">
+
+  <div class="bg-white shadow-lg rounded-xl p-6 w-full max-w-md">
+    <h1 class="text-2xl font-bold text-center mb-4">🌦 Weather Forecast</h1>
+
+    <!-- 🔍 Search + 📍 Location -->
+    <div class="flex flex-wrap gap-2 mb-4">
+      <input type="text" id="cityInput" placeholder="Enter city name" class="flex-1 border rounded px-2 py-1" />
+      <button id="searchBtn" class="bg-blue-500 text-white px-3 py-1 rounded">Search</button>
+      <button id="geoBtn" class="bg-green-500 text-white px-3 py-1 rounded">📍 My Location</button>
+    </div>
+
+    <!-- ⬇️ Recent Dropdown -->
+    <select id="recentDropdown" class="w-full border px-2 py-1 mb-4 hidden">
+      <option disabled selected>Recent Searches</option>
+    </select>
+
+    <!-- 🌤 Weather Results -->
+    <div id="weatherResult" class="text-center"></div>
+  </div>
+
+  <footer class="text-xs text-center mt-4">
+    Powered by <a href="https://www.weatherapi.com/" class="underline text-blue-500" title="Free Weather API">WeatherAPI.com</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
